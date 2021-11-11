@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: josgarci <josgarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 17:41:04 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/11 13:27:44 by josgarci         ###   ########.fr       */
+/*   Created: 2021/11/11 13:18:30 by josgarci          #+#    #+#             */
+/*   Updated: 2021/11/11 13:44:11 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+int	ft_nbrlen(long long int number)
+{
+	int				nbrlen;
+	long long int	aux;
 
-int	ft_nbrlen(int number);
-
-
-# endif
+	nbrlen = 0;
+	if (number == 0)
+		return (1);
+	aux = number;
+	while (aux)
+	{
+		aux /= 10;
+		nbrlen++;
+	}
+	if (number < 0)
+		nbrlen++;
+	return (nbrlen);
+}
