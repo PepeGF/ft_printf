@@ -4,7 +4,7 @@ int ft_nbrlen(long long int number);
 
 int main()
 {
-	long long int num = -1;
-	printf("%d\n",ft_nbrlen(num));
+	unsigned int num = 4294966729;
+	printf("%u\n",num);
 	return (0);
 }
