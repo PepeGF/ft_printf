@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josgarci <josgarci@student.42madrid>       +#+  +:+       +#+        */
+/*   By: josgarci <josgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 13:18:30 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/11 13:44:11 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/12 16:44:37 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_nbrlen(long long int number)
 {

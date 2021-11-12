@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josgarci <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: josgarci <josgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 11:40:27 by josgarci          #+#    #+#             */
-/*   Updated: 2021/08/18 11:40:30 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/12 16:52:42 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 int	check_base(char *base)
 {
@@ -35,8 +35,8 @@ int	check_base(char *base)
 		return (0);
 	return (1);
 }
-
-int	ft_strlen(char *str)
+/*
+size_t	ft_strlen(const char *str)
 {
 	int	counter;
 
@@ -48,8 +48,8 @@ int	ft_strlen(char *str)
 	}
 	return (counter);
 }
-
-void	ft_putnbr(long int num, int len_base, char *base)
+*/
+static void	ft_putnbr_mod(long int num, int len_base, char *base)
 {
 	if (num < 0)
 	{
@@ -58,7 +58,7 @@ void	ft_putnbr(long int num, int len_base, char *base)
 	}
 	if (num > (len_base - 1))
 	{	
-		ft_putnbr(num / len_base, len_base, base);
+		ft_putnbr_mod(num / len_base, len_base, base);
 	}
 	num = base[num % len_base];
 	write (1, &num, 1);
@@ -71,5 +71,5 @@ void	ft_putnbr_base(int nbr, char *base)
 	if (check_base(base) == 0)
 		return ;
 	len_base = ft_strlen(base);
-	ft_putnbr(nbr, len_base, base);
+	ft_putnbr_mod(nbr, len_base, base);
 }
