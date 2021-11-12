@@ -6,14 +6,22 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:41:04 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/11 13:27:44 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:33:18 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
-int	ft_nbrlen(int number);
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
 
+int		ft_nbrlen(long long int number);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_base(int nbr, char *base);
+void	ft_putnbr(int num);
+void	ft_putstr_fd(char *s, int fd);
+size_t	ft_strlen(const char *s);
 
-# endif
+#endif

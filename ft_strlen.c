@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: josgarci <josgarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/26 20:06:51 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/12 13:38:22 by josgarci         ###   ########.fr       */
+/*   Created: 2021/11/12 13:31:48 by josgarci          #+#    #+#             */
+/*   Updated: 2021/11/12 13:32:46 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
-void	ft_putstr_fd(char *s, int fd)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	if (!s)
-		return ;
+		return (0);
 	i = 0;
+
 	while (s[i])
-	{
-		write(fd, &s[i], sizeof(char));
 		i++;
-	}
+	return (i);
 }

@@ -1,10 +1,16 @@
 #include <stdio.h>
 
-int ft_nbrlen(long long int number);
+void	ft_putnbr_base(int nbr, char *base);
 
 int main()
 {
-	unsigned int num = 4294966729;
-	printf("%u\n",num);
+	/*int num = 123456;
+
+	ft_putnbr_base(num, "0123456789abcdef");
+	printf("\n%x\n",num);
+	ft_putnbr_base(num, "0123456789ABCDEF");
+	printf("\n%X",num);
+	*/
+	printf("%Y\n");
 	return (0);
 }
