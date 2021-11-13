@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 20:06:51 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 13:07:52 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:25:51 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	if (s[0] == '\0')
 		return (0);
