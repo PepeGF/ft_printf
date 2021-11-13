@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void	ft_putnbr_base(int nbr, char *base);
+//void	ft_putnbr_base(int nbr, char *base);
 
 int main()
 {
@@ -11,6 +11,6 @@ int main()
 	ft_putnbr_base(num, "0123456789ABCDEF");
 	printf("\n%X",num);
 	*/
-	printf("%Y\n");
+	printf("%s\n","");
 	return (0);
 }

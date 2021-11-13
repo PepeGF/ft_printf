@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 13:31:48 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/12 16:44:56 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 12:04:31 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ size_t	ft_strlen(const char *s)
 {
 	int	i;
 
-	if (!s)
-		return (0);
 	i = 0;
-
+	if (s[i] == '\0')
+		return (0);
 	while (s[i])
 		i++;
 	return (i);
