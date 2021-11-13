@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:53:54 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 18:41:00 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 19:40:42 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_printf(const char *str, ...)
 
 static void	ft_place_holder_manager(char c, int *ret_value, va_list args)
 {
-	if (c == 'i' || c == 'd' || c == 'u' || c == 'x' || c == 'X')
+	if (c == 'i' || c == 'd' || c == 'u' || c == 'x' || c == 'X' || c == 'p')
 	{
 		ft_place_holder_numeric(c, ret_value, args);
 	}
@@ -102,13 +102,13 @@ static void	ft_place_holder_alpha(char c, int *ret_value, va_list args)
 		*ret_value += 1;
 	}
 }
-
+/*
 int main ()
 {
 	ft_printf("%p", -1);
 	return (0);
 }
-
+*/
 
 /*
  * if i -2147483648 2147483647

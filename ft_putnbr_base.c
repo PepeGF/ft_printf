@@ -6,14 +6,14 @@
 /*   By: josgarci <josgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 11:40:27 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 18:27:53 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 19:40:59 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 static int	check_base(char *base);
-static void	ft_putnbr_mod(long int num, int len_base, char *base);
+static void	ft_putnbr_mod(unsigned long int num, int len_base, char *base);
 
 
 int	ft_putnbr_base(unsigned long int nbr, char *base)
@@ -29,14 +29,14 @@ int	ft_putnbr_base(unsigned long int nbr, char *base)
 	return (len_nbr);
 }
 
-static void	ft_putnbr_mod(long int num, int len_base, char *base)
+static void	ft_putnbr_mod(unsigned long int num, int len_base, char *base)
 {
-	if (num < 0)
+	/*if (num < 0)
 	{
 		write (1, "-", 1);
 		num = num * -1;
-	}
-	if (num > (len_base - 1))
+	}*/
+	if (num > ((unsigned long int)len_base - 1))
 	{	
 		ft_putnbr_mod(num / len_base, len_base, base);
 	}
