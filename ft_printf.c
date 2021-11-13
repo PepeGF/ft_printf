@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:53:54 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 15:28:04 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 16:17:08 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ static void	ft_place_holder_alpha(char c, int *ret_value, va_list args)
 		*ret_value += 1;
 	}
 }
-
+/*
 int main ()
 {
 	int num = 10;
@@ -113,7 +113,7 @@ int main ()
 
 	return (0);
 }
-
+*/
 
 /*
  * if i -2147483648 2147483647
