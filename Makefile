@@ -1,5 +1,5 @@
 SRCS    =	ft_printf.c ft_nbrlen.c ft_putchar_fd.c ft_putnbr.c \
-			ft_putnbr_base.c ft_putstr_fd.c ft_strlen.c
+			ft_putnbr_base.c ft_putstr_fd.c ft_strlen.c ft_nbrlen_base.c
 
 OBJS = $(SRCS:.c=.o)
 

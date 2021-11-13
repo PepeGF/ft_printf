@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:53:54 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 16:17:08 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 18:41:00 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,21 +68,23 @@ static void	ft_place_holder_numeric(char c, int *ret_value, va_list args)
 	}
 	if (c == 'u')
 	{
-		ft_putnbr_base(va_arg(args, int), "0123456789");
-		*ret_value += ft_nbrlen(va_arg(args, int));
+		*ret_value += ft_putnbr_base(va_arg(args, unsigned int), "0123456789");
+//		*ret_value += ft_nbrlen(va_arg(args, int));
 	}
 	if (c == 'x')
 	{
-		ft_putnbr_base(va_arg(args, int), "0123456789abcdef");
-		*ret_value += ft_nbrlen(va_arg(args, int));
+		*ret_value += ft_putnbr_base(va_arg(args, unsigned int), "0123456789abcdef");
+//		*ret_value += ft_nbrlen(va_arg(args, int));
 	}
 	if (c == 'X')
 	{
-		ft_putnbr_base(va_arg(args, int), "0123456789ABCDEF");
-		*ret_value += ft_nbrlen(va_arg(args, int));
+		*ret_value += ft_putnbr_base(va_arg(args,unsigned int), "0123456789ABCDEF");
+//		*ret_value += ft_nbrlen(va_arg(args, int));
 	}
 	if (c == 'p')
 	{
+		*ret_value += write(1,"0x",2);
+		*ret_value += ft_putnbr_base(va_arg(args, unsigned long int), "0123456789abcdef"); 
 		/*no se que hacer*/
 		//*ret_value += ni idea
 	}
@@ -100,20 +102,13 @@ static void	ft_place_holder_alpha(char c, int *ret_value, va_list args)
 		*ret_value += 1;
 	}
 }
-/*
+
 int main ()
 {
-	int num = 10;
-	int i;
-	int j;
-
-	i = ft_printf(" %d ",num);
-	j = printf("\n%d\n",num);
-	printf("-------------\n%i\t%i\n",i , j);
-
+	ft_printf("%p", -1);
 	return (0);
 }
-*/
+
 
 /*
  * if i -2147483648 2147483647

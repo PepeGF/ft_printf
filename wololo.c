@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int	ft_putnbr(int num);
-
 int main()
 {
-	int x = 63;
+	int x = 2;
 	int y;
-	y = ft_putnbr(x);
-	y += 0;
+
+	y = printf("%p", -1);
+	printf("\n");
+	y = printf("%lx", -1);
+	printf("\n------------\n");
+	printf("%i\n",y);
 	return (0);
 }

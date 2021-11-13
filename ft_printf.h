@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:41:04 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 14:18:11 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 18:28:03 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 # include <stdarg.h>
 
 int		ft_printf(const char *str, ...);
-int		ft_nbrlen(long long int number);
 int		ft_putchar_fd(char c, int fd);
-void	ft_putnbr_base(int nbr, char *base);
-int		ft_putnbr(int num);
 int		ft_putstr_fd(char *s, int fd);
+int		ft_putnbr(int num);
+int		ft_putnbr_base(unsigned long int nbr, char *base);
 size_t	ft_strlen(const char *s);
+int		ft_nbrlen(long long int number);
+int		ft_nbrlen_base(long long int number, int len_base);
 
 #endif
