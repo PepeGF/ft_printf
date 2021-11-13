@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 20:06:51 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 13:25:51 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:39:55 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ int	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	if (!s)
-		return (0);
+		return (write(1, "(null)", 6));
 	i = 0;
-	if (s[0] == '\0')
-		return (0);
 	while (s[i])
 	{
 		write(fd, &s[i], sizeof(char));

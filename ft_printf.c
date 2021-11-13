@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:53:54 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 13:18:54 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:27:44 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,12 +120,12 @@ int main ()
  * if d -2147483648 2147483647
  *
  */
-
+/*
 int main()
 {
 	ft_printf(" NULL %s NULL ", NULL);
 	return (0);
 }
-
+*/
 
 
