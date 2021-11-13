@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 11:39:35 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 14:19:00 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/13 15:24:07 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_putnbr(int num)
 {
 	int	len;
 
-	len = 0;
+	len = ft_nbrlen(num);
 	if (num == -2147483648)
 	{	
 		len += write (1, "-2147483648", 11);
@@ -24,7 +24,7 @@ int	ft_putnbr(int num)
 	}
 	if (num < 0)
 	{
-		len += write (1, "-", 1);
+		write (1, "-", 1);
 		num = num * -1;
 	}
 	if (num > 9)
@@ -32,6 +32,5 @@ int	ft_putnbr(int num)
 		ft_putnbr (num / 10);
 	}
 	num = num % 10 + '0';
-	len += write (1, &num, 1);
 	return (len);
 }
