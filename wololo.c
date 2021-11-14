@@ -4,6 +4,6 @@
 
 int main()
 {
-	printf("%ld\n", -ULONG_MAX);
+	printf("%p\n%p\n", 0, 0);
 	return (0);
 }
