@@ -14,13 +14,14 @@ RM = rm -f
 all:	$(NAME)	
 	
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $?
+	@ar rcs $(NAME) $?
+	@echo "\nCompilado con éxito"
 
 clean:	
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME) $(BONUS_OBJS)
+	@$(RM) $(NAME) $(BONUS_OBJS)
 
 re:	fclean $(NAME)
 	
