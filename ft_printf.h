@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:41:04 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/13 18:28:03 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:02:03 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int		ft_putnbr(int num);
 int		ft_putnbr_base(unsigned long int nbr, char *base);
 size_t	ft_strlen(const char *s);
 int		ft_nbrlen(long long int number);
-int		ft_nbrlen_base(long long int number, int len_base);
+int		ft_nbrlen_base(unsigned long long int number, int len_base);
 
 #endif
