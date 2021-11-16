@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:53:54 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/16 13:57:29 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:09:10 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static void	ft_place_holder_manager(char c, int *rv, va_list a)
 		*rv += 1;
 	}
 }
-
+/*
 int main ()
 {
     //int i;
@@ -87,4 +87,4 @@ int main ()
     ft_printf("\n");
     return (0);
  }
-
+*/

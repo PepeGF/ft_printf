@@ -6,7 +6,7 @@
 /*   By: josgarci <josgarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 16:36:08 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/16 14:02:23 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:13:43 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_nbrlen_base(unsigned long long int number, int len_base)
 {
 	unsigned long long int	aux;
-	int				nbrlen;
+	int						nbrlen;
 
 	nbrlen = 0;
 	if (number == 0)

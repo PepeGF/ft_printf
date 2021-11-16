@@ -6,12 +6,12 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:41:04 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/16 14:02:03 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:13:04 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <unistd.h>
 # include <stdlib.h>
