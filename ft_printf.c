@@ -6,14 +6,11 @@
 /*   By: josgarci <josgarci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:53:54 by josgarci          #+#    #+#             */
-/*   Updated: 2021/11/16 14:09:10 by josgarci         ###   ########.fr       */
+/*   Updated: 2021/11/17 18:17:17 by josgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-#include <limits.h>
-#include <stdio.h>
 
 static void	ft_place_holder_manager(char c, int *ret_value, va_list args);
 
@@ -71,20 +68,3 @@ static void	ft_place_holder_manager(char c, int *rv, va_list a)
 		*rv += 1;
 	}
 }
-/*
-int main ()
-{
-    //int i;
-    int j;
-
-//	i = ft_printf("%p", -ULONG_MAX);
-//    ft_printf("\n");
-//   ft_printf("%d",i);
-//    ft_printf("\n");
-    j = ft_printf("%p", ULONG_MAX);
-    ft_printf("\n");
-    ft_printf("%d",j);
-    ft_printf("\n");
-    return (0);
- }
-*/
