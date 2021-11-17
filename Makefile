@@ -12,10 +12,13 @@ CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
 all:	$(NAME)	
+
+%.o:%.c
+		@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 	
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $?
-	@echo "\nCompilado con éxito"
+		@echo "Compilado con éxito"
 
 clean:	
 	@$(RM) $(OBJS)
