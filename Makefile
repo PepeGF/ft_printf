@@ -18,7 +18,6 @@ all:	$(NAME)
 	
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $?
-		@echo "Compilado con éxito"
 
 clean:	
 	@$(RM) $(OBJS)
